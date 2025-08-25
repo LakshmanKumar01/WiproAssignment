@@ -1,0 +1,20 @@
+<p>movie works!</p>
+<div class="movie-grid">
+  
+        @for (movie of movies; track movie.title) {
+            <mat-card class="mat-card-outlined">
+            <mat-card-header>
+                <mat-card-title>Title: {{ movie.title }}</mat-card-title>
+                <mat-card-subtitle>Genre: {{ movie.genre }}</mat-card-subtitle>
+            </mat-card-header>
+
+            <img mat-card-image [src]="movie.image" alt="{{ movie.title }}">
+
+            <mat-card-content>
+                <h3>Rating: {{ movie.rating }}</h3>
+                <p>{{ movie.description }}</p>
+            </mat-card-content>
+            </mat-card>
+        }
+  
+</div>
