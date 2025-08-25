@@ -1,0 +1,32 @@
+<h1 >Music Player</h1>
+<div class="music-app">
+
+ 
+  <div class="song-grid">
+    @for (song of songs; track song.name) {
+      <mat-card class="song-card mat-elevation-z4">
+
+       
+        <img mat-card-image [src]="song.image" alt="{{ song.name }}">
+
+        
+        <mat-card-content>
+          <h2>{{ song.name }}</h2>
+          <p><strong>Album:</strong> {{ song.album }}</p>
+          <p><strong>Singer:</strong> {{ song.singer }}</p>
+          <p><strong>Duration:</strong> {{ song.duration }}</p>
+          <p><strong>Rating:</strong> {{ song.rating }}</p>
+        </mat-card-content>
+
+       
+        <mat-card-actions>
+          <button mat-raised-button color="primary">
+            <mat-icon>play_circle_filled</mat-icon> Play
+          </button>
+        </mat-card-actions>
+
+      </mat-card>
+    }
+  </div>
+
+</div>
